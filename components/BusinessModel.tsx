@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ShieldCheck } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 export default function BusinessModel() {
@@ -48,6 +49,35 @@ export default function BusinessModel() {
             </motion.div>
           ))}
         </div>
+
+        {/* Audit guarantee */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7 }}
+          className="mt-5 rounded-3xl border border-signal/20 bg-signal/[0.04] p-8"
+        >
+          <div className="flex flex-col gap-5 md:flex-row md:items-start md:gap-8">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-signal/30 bg-signal/[0.08]">
+              <ShieldCheck className="h-5 w-5 text-signal" strokeWidth={1.5} />
+            </div>
+            <div>
+              <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
+                {t.businessModel.guarantee.label}
+              </span>
+              <h3 className="mt-2 font-display text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                {t.businessModel.guarantee.title}
+              </h3>
+              <p className="mt-3 max-w-2xl font-body text-sm leading-relaxed text-white/70">
+                {t.businessModel.guarantee.text}
+              </p>
+              <p className="mt-4 max-w-2xl border-t border-line pt-4 font-body text-[12px] leading-relaxed text-white/40">
+                {t.businessModel.guarantee.note}
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

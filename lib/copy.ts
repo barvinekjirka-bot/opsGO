@@ -187,6 +187,12 @@ export const copy = {
           desc: "U vybraných projektů může být část odměny vázaná na skutečně doručené úspory.",
         },
       ],
+      guarantee: {
+        label: "Garance auditu",
+        title: "Nenajdeme aspoň 3 příležitosti ke zlepšení? Audit neplatíte.",
+        text: "Věříme tomu, co děláme. Pokud vám provozní audit neodhalí minimálně tři konkrétní, realizovatelné příležitosti ke zlepšení s vyčísleným odhadem přínosu, fakturu za audit nevystavíme.",
+        note: "Garance platí pro audit v plném rozsahu — s přístupem do provozu a k provozním datům, která k vyhodnocení potřebujeme. Co se počítá jako „konkrétní, realizovatelná příležitost“, definujeme společně předem ve smlouvě: doporučení s popsaným postupem zavedení a odhadem přínosu.",
+      },
     },
     impact: {
       label: "Měřitelný dopad",
@@ -208,7 +214,7 @@ export const copy = {
     },
     founders: {
       label: "Kdo jsme",
-      title: "Dva provozáci. Přes 13 let v provozu i v datech.",
+      title: "Dva provozáci. Dohromady přes 25 let v provozu i v datech.",
       sub: "OpsGo založili a vedou lidé, kteří audity, implementace i go-live sami odpracovali — a vědí, co obnáší změna v reálném provozu.",
       jiri: {
         name: "Jiří Barvínek",
@@ -257,9 +263,52 @@ export const copy = {
       },
       juraj: {
         name: "Juraj Komár",
-        role: "Spoluzakladatel",
-        placeholder:
-          "Kompletní profil a výsledky doplníme v nejbližších dnech. Struktura zrcadlí kartu vlevo — shrnutí, časová osa zkušeností a klíčové úspěchy.",
+        role: "Spoluzakladatel — Provozní transformace & Logistika",
+        bio: "Senior operations a logistický profesionál s více než 11 lety zkušeností. Kombinuje provozní řízení s praktickými zkušenostmi z distribučních center a transformačních projektů. Zaměřuje se na zvyšování produktivity, optimalizaci logistických procesů a snižování provozních nákladů — od návrhu skladových layoutů a implementace WMS až po řízení komplexních transformačních projektů a implementací nových zákazníků.",
+        experience: [
+          {
+            role: "Vedoucí divize DIO | Procesní specialista",
+            company: "3K značky s.r.o., Praha",
+            period: "Bře 2025 — dosud",
+            desc: "Komplexní řízení divize přechodného dopravního značení. Odpovědnost za provoz, logistiku, plánování kapacit, projektové řízení a digitalizaci procesů. Implementace WMS a optimalizace skladového hospodářství.",
+          },
+          {
+            role: "Manažer správy budov a infrastruktury",
+            company: "DHL Solutions k.s., Jažlovice",
+            period: "Říj 2024 — Úno 2025",
+            desc: "Řídil správu logistického areálu o rozloze 56 000 m². Odpovědnost za technickou infrastrukturu, koordinaci dodavatelů, investice a zajištění plynulého provozu jednoho z největších logistických areálů společnosti DHL v České republice.",
+          },
+          {
+            role: "Provozní ředitel logistického centra",
+            company: "DHL Solutions k.s., Jažlovice",
+            period: "Úno 2020 — Zář 2024",
+            desc: "Řídil multiklientské distribuční centrum o rozloze 20 000 m² s provozem pro 15+ zákazníků. Odpovídal za P&L, rozpočty, plánování kapacit a vedení provozních týmů. Vedl implementaci 3 nových zákazníků včetně návrhu procesů, spuštění provozu a stabilizace výkonu. Řídil migraci WMS Blue Yonder společně s migrací ERP systémů zákazníků — bez omezení provozu.",
+          },
+          {
+            role: "Procesní specialista",
+            company: "DHL Solutions k.s., Jažlovice",
+            period: "Čvn 2014 — Led 2020",
+            desc: "Projektový management a procesní optimalizace s využitím metodik Lean a DMAIC. Návrhy skladových layoutů, implementace WMS, automatizace logistických procesů a zavádění paperless pickingu.",
+          },
+        ],
+        stats: [
+          {
+            value: "3",
+            label: "Implementace nových zákazníků od návrhu po stabilizaci",
+          },
+          {
+            value: "15+",
+            label: "Zákazníků v multiklientském provozu",
+          },
+          {
+            value: "20 000 m²",
+            label: "Řízené distribuční centrum vč. P&L",
+          },
+          {
+            value: "56 000 m²",
+            label: "Spravovaný logistický areál",
+          },
+        ],
       },
       award: {
         label: "Týmové ocenění 2025",
@@ -494,6 +543,12 @@ export const copy = {
           desc: "For select projects, part of the fee can be tied to the savings we actually deliver.",
         },
       ],
+      guarantee: {
+        label: "Audit Guarantee",
+        title: "Fewer than 3 improvement opportunities found? The audit is free.",
+        text: "We stand behind our work. If your operational audit doesn't surface at least three specific, actionable improvement opportunities with a quantified benefit estimate, we won't invoice the audit.",
+        note: "The guarantee applies to a full-scope audit — with access to the operation and the operational data we need for the assessment. What counts as a “specific, actionable opportunity” is defined together upfront in the agreement: a recommendation with a described implementation path and an estimated benefit.",
+      },
     },
     impact: {
       label: "Measurable Impact",
@@ -515,7 +570,7 @@ export const copy = {
     },
     founders: {
       label: "Who We Are",
-      title: "Two operators. 13+ years on the floor and in the data.",
+      title: "Two operators. 25+ combined years on the floor and in the data.",
       sub: "OpsGo is founded and run by people who did the audits, implementations, and go-lives themselves — and know what change takes in a real operation.",
       jiri: {
         name: "Jiří Barvínek",
@@ -564,9 +619,52 @@ export const copy = {
       },
       juraj: {
         name: "Juraj Komár",
-        role: "Co-Founder",
-        placeholder:
-          "Full bio and track record coming soon. The structure mirrors the card on the left — summary, experience timeline, and key achievements.",
+        role: "Co-Founder — Operations Transformation & Logistics",
+        bio: "Senior operations and logistics professional with 11+ years of experience. Combines operational leadership with hands-on experience from distribution centers and transformation projects. Focused on productivity improvement, logistics process optimization, and reducing operating costs — from warehouse layout design and WMS implementation to managing complex transformation projects and new customer implementations.",
+        experience: [
+          {
+            role: "Head of DIO Division | Process Specialist",
+            company: "3K značky s.r.o., Prague",
+            period: "Mar 2025 — Present",
+            desc: "End-to-end management of the temporary traffic signage division. Responsible for operations, logistics, capacity planning, project management, and process digitalization. WMS implementation and warehouse management optimization.",
+          },
+          {
+            role: "Facility & Infrastructure Manager",
+            company: "DHL Solutions k.s., Jažlovice",
+            period: "Oct 2024 — Feb 2025",
+            desc: "Managed a 56,000 m² logistics campus. Responsible for technical infrastructure, supplier coordination, investments, and the smooth running of one of DHL's largest logistics sites in the Czech Republic.",
+          },
+          {
+            role: "Operations Director, Logistics Center",
+            company: "DHL Solutions k.s., Jažlovice",
+            period: "Feb 2020 — Sep 2024",
+            desc: "Ran a 20,000 m² multi-client distribution center serving 15+ customers. Owned P&L, budgets, capacity planning, and leadership of operations teams. Led the implementation of 3 new customers including process design, ramp-up, and performance stabilization. Managed the Blue Yonder WMS migration alongside customers' ERP migrations — with no operational downtime.",
+          },
+          {
+            role: "Process Specialist",
+            company: "DHL Solutions k.s., Jažlovice",
+            period: "Jun 2014 — Jan 2020",
+            desc: "Project management and process optimization using Lean and DMAIC. Warehouse layout design, WMS implementation, logistics process automation, and paperless picking rollout.",
+          },
+        ],
+        stats: [
+          {
+            value: "3",
+            label: "New customer implementations, design to stabilization",
+          },
+          {
+            value: "15+",
+            label: "Customers in a multi-client operation",
+          },
+          {
+            value: "20,000 m²",
+            label: "Distribution center run incl. P&L",
+          },
+          {
+            value: "56,000 m²",
+            label: "Logistics campus managed",
+          },
+        ],
       },
       award: {
         label: "2025 Team Award",

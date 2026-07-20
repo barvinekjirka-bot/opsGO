@@ -1,10 +1,106 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, TrendingDown, TrendingUp, Users } from "lucide-react";
+import {
+  TrendingDown,
+  TrendingUp,
+  Users,
+  Rocket,
+  Building2,
+  Warehouse,
+  type LucideIcon,
+} from "lucide-react";
 import { useLang } from "@/lib/i18n";
+import type { Copy } from "@/lib/copy";
 
-const STAT_ICONS = [TrendingDown, TrendingUp, Users];
+const JIRI_STAT_ICONS: LucideIcon[] = [TrendingDown, TrendingUp, Users];
+const JURAJ_STAT_ICONS: LucideIcon[] = [Rocket, Users, Warehouse, Building2];
+
+type Founder =
+  | Copy["founders"]["jiri"]
+  | Copy["founders"]["juraj"];
+
+function FounderCard({
+  founder,
+  initials,
+  statIcons,
+  delay = 0,
+}: {
+  founder: Founder;
+  initials: string;
+  statIcons: LucideIcon[];
+  delay?: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.7, delay }}
+      className="liquid-glass rounded-3xl p-8"
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h3 className="font-display text-xl font-semibold text-white">
+            {founder.name}
+          </h3>
+          <p className="mt-1 font-mono text-[12px] uppercase tracking-wide text-signal">
+            {founder.role}
+          </p>
+        </div>
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-line bg-white/[0.02] font-display text-lg text-white/40">
+          {initials}
+        </div>
+      </div>
+
+      <p className="mt-5 font-body text-sm leading-relaxed text-white/60">
+        {founder.bio}
+      </p>
+
+      <div className="mt-7 space-y-5 border-t border-line pt-6">
+        {founder.experience.map((exp) => (
+          <div key={exp.role} className="grid grid-cols-[92px_1fr] gap-4">
+            <span className="font-mono text-[11px] leading-relaxed text-white/35">
+              {exp.period}
+            </span>
+            <div>
+              <p className="font-body text-sm font-semibold text-white/90">
+                {exp.role}
+              </p>
+              <p className="font-mono text-[11px] text-white/40">
+                {exp.company}
+              </p>
+              <p className="mt-1.5 font-body text-[13px] leading-relaxed text-white/50">
+                {exp.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div
+        className={`mt-7 grid gap-4 border-t border-line pt-6 ${
+          founder.stats.length === 4 ? "grid-cols-2" : "grid-cols-3"
+        }`}
+      >
+        {founder.stats.map((stat, i) => {
+          const Icon = statIcons[i];
+          return (
+            <div key={stat.label}>
+              <Icon className="mb-2 h-4 w-4 text-signal" strokeWidth={1.5} />
+              <p className="font-mono text-lg font-semibold text-white">
+                {stat.value}
+              </p>
+              <p className="mt-0.5 font-body text-[11px] leading-snug text-white/45">
+                {stat.label}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    </motion.div>
+  );
+}
 
 export default function Founders() {
   const { t } = useLang();
@@ -29,101 +125,14 @@ export default function Founders() {
           <p className="mt-5 font-body text-white/55">{f.sub}</p>
         </motion.div>
 
-        <div className="grid gap-5 lg:grid-cols-2">
-          {/* Jiří Barvínek */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
-            className="liquid-glass rounded-3xl p-8"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h3 className="font-display text-xl font-semibold text-white">
-                  {f.jiri.name}
-                </h3>
-                <p className="mt-1 font-mono text-[12px] uppercase tracking-wide text-signal">
-                  {f.jiri.role}
-                </p>
-              </div>
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-line bg-white/[0.02] font-display text-lg text-white/40">
-                JB
-              </div>
-            </div>
-
-            <p className="mt-5 font-body text-sm leading-relaxed text-white/60">
-              {f.jiri.bio}
-            </p>
-
-            <div className="mt-7 space-y-5 border-t border-line pt-6">
-              {f.jiri.experience.map((exp) => (
-                <div key={exp.role} className="grid grid-cols-[92px_1fr] gap-4">
-                  <span className="font-mono text-[11px] leading-relaxed text-white/35">
-                    {exp.period}
-                  </span>
-                  <div>
-                    <p className="font-body text-sm font-semibold text-white/90">
-                      {exp.role}
-                    </p>
-                    <p className="font-mono text-[11px] text-white/40">
-                      {exp.company}
-                    </p>
-                    <p className="mt-1.5 font-body text-[13px] leading-relaxed text-white/50">
-                      {exp.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-7 grid grid-cols-3 gap-3 border-t border-line pt-6">
-              {f.jiri.stats.map((stat, i) => {
-                const Icon = STAT_ICONS[i];
-                return (
-                  <div key={stat.label}>
-                    <Icon className="mb-2 h-4 w-4 text-signal" strokeWidth={1.5} />
-                    <p className="font-mono text-lg font-semibold text-white">
-                      {stat.value}
-                    </p>
-                    <p className="mt-0.5 font-body text-[11px] leading-snug text-white/45">
-                      {stat.label}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </motion.div>
-
-          {/* Juraj Komár - placeholder */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="liquid-glass flex flex-col rounded-3xl p-8"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h3 className="font-display text-xl font-semibold text-white">
-                  {f.juraj.name}
-                </h3>
-                <p className="mt-1 font-mono text-[12px] uppercase tracking-wide text-signal">
-                  {f.juraj.role}
-                </p>
-              </div>
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-line bg-white/[0.02] font-display text-lg text-white/40">
-                JK
-              </div>
-            </div>
-
-            <div className="mt-8 flex flex-1 flex-col items-start justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.015] p-8">
-              <Award className="mb-4 h-5 w-5 text-white/30" strokeWidth={1.5} />
-              <p className="font-body text-sm leading-relaxed text-white/45">
-                {f.juraj.placeholder}
-              </p>
-            </div>
-          </motion.div>
+        <div className="grid items-start gap-5 lg:grid-cols-2">
+          <FounderCard founder={f.jiri} initials="JB" statIcons={JIRI_STAT_ICONS} />
+          <FounderCard
+            founder={f.juraj}
+            initials="JK"
+            statIcons={JURAJ_STAT_ICONS}
+            delay={0.1}
+          />
         </div>
 
         {/* Team achievement highlight */}
