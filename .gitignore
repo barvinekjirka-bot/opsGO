@@ -1,0 +1,7 @@
+node_modules
+.next
+out
+.env*.local
+*.zip
+.claude/settings.local.json
+app/.claude/settings.local.json
