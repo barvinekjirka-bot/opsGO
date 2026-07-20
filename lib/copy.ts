@@ -330,6 +330,12 @@ export const copy = {
       privacy: "Ochrana soukromí",
       terms: "Obchodní podmínky",
     },
+    notFound: {
+      label: "404",
+      title: "Tahle stránka se ztratila v provozu.",
+      text: "Možná jsme ji přesunuli, možná nikdy neexistovala. Buď se vraťte na hlavní stranu, nebo nám rovnou napište, co hledáte.",
+      cta: "Zpět na hlavní stránku",
+    },
   },
   en: {
     meta: {
@@ -659,6 +665,12 @@ export const copy = {
       tagline: "Results, not presentations.",
       privacy: "Privacy",
       terms: "Terms",
+    },
+    notFound: {
+      label: "404",
+      title: "This page got lost somewhere in the operation.",
+      text: "Maybe we moved it, maybe it never existed. Head back to the homepage, or just tell us what you were looking for.",
+      cta: "Back to homepage",
     },
   },
 } as const;

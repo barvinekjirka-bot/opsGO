@@ -1,11 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Layers, Route, ClipboardList } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import SectionLabel from "./SectionLabel";
-
-const CATEGORY_ICONS = [Layers, Route, ClipboardList];
 
 export default function Methods() {
   const { t } = useLang();
@@ -30,7 +27,6 @@ export default function Methods() {
 
         <div className="flex flex-col gap-14">
           {m.categories.map((cat, ci) => {
-            const Icon = CATEGORY_ICONS[ci];
             return (
               <div key={cat.title}>
                 <motion.div
@@ -38,9 +34,12 @@ export default function Methods() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.6 }}
-                  className="mb-6 flex items-center gap-2.5"
+                  className="mb-6 flex items-center gap-3"
                 >
-                  <Icon className="h-4 w-4 text-signal" strokeWidth={1.5} />
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-signal/40 bg-ink font-mono text-[10px] text-signal">
+                    5.{ci + 1}
+                  </span>
+                  <span className="h-px w-6 shrink-0 bg-signal/40" />
                   <h3 className="font-mono text-[12px] uppercase tracking-widest2 text-white/50">
                     {cat.title}
                   </h3>

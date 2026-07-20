@@ -25,28 +25,37 @@ export default function BusinessModel() {
           <p className="mt-5 font-body text-white/55">{t.businessModel.sub}</p>
         </motion.div>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {t.businessModel.tiers.map((tier, i) => (
-            <motion.div
-              key={tier.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="liquid-glass flex flex-col rounded-3xl p-7"
-            >
-              <span className="font-mono text-[11px] text-white/30">{tier.label}</span>
-              <h3 className="mt-4 font-display text-lg font-semibold text-white">
-                {tier.title}
-              </h3>
-              <span className="mt-1 font-mono text-[12px] uppercase tracking-wide text-signal">
-                {tier.price}
-              </span>
-              <p className="mt-4 font-body text-sm leading-relaxed text-white/50">
-                {tier.desc}
-              </p>
-            </motion.div>
-          ))}
+        {/* Tiers on the signal rail — same motif as How We Work */}
+        <div className="relative">
+          <span className="absolute left-0 right-0 top-5 hidden h-px bg-gradient-to-r from-transparent via-signal/40 to-transparent md:block" />
+
+          <div className="grid gap-8 md:grid-cols-2 md:gap-5 lg:grid-cols-4">
+            {t.businessModel.tiers.map((tier, i) => (
+              <motion.div
+                key={tier.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                className="relative flex flex-col"
+              >
+                <span className="relative z-10 mb-5 flex h-10 w-10 items-center justify-center self-start rounded-full border border-signal/50 bg-ink font-mono text-[11px] text-signal shadow-[0_0_10px_0_rgba(255,122,26,0.25)] md:self-center">
+                  {tier.label}
+                </span>
+                <div className="liquid-glass flex flex-1 flex-col rounded-3xl p-7">
+                  <h3 className="font-display text-lg font-semibold text-white">
+                    {tier.title}
+                  </h3>
+                  <span className="mt-1 font-mono text-[12px] uppercase tracking-wide text-signal">
+                    {tier.price}
+                  </span>
+                  <p className="mt-4 font-body text-sm leading-relaxed text-white/50">
+                    {tier.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Audit guarantee */}
@@ -55,7 +64,7 @@ export default function BusinessModel() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="mt-5 rounded-3xl border border-signal/20 bg-signal/[0.04] p-8"
+          className="mt-10 rounded-3xl border border-signal/20 bg-signal/[0.04] p-8"
         >
           <div className="flex flex-col gap-5 md:flex-row md:items-start md:gap-8">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-signal/30 bg-signal/[0.08]">
