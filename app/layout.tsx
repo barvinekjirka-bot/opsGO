@@ -68,6 +68,9 @@ export default function RootLayout({
     >
       <body className="bg-ink text-white antialiased">
         <LanguageProvider>{children}</LanguageProvider>
+        <div className="vignette" />
+        <div className="warm-grade" />
+        <div className="grain-overlay" />
       </body>
     </html>
   );

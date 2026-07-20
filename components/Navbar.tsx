@@ -79,7 +79,7 @@ export default function Navbar() {
             <LangToggle />
             <a
               href="#contact"
-              className="flex items-center gap-1.5 rounded-full bg-white px-4 py-2 font-body text-[13px] font-semibold text-ink transition-transform duration-300 hover:scale-[1.03]"
+              className="flex items-center gap-1.5 rounded-full btn-signature px-4 py-2 font-body text-[13px] font-semibold text-ink transition-transform duration-300 hover:scale-[1.03]"
             >
               {t.nav.cta}
               <ArrowUpRight className="h-3.5 w-3.5" />
@@ -121,7 +121,7 @@ export default function Navbar() {
                 <a
                   href="#contact"
                   onClick={() => setOpen(false)}
-                  className="mt-2 rounded-full bg-white px-4 py-2.5 text-center font-body text-sm font-semibold text-ink"
+                  className="mt-2 rounded-full btn-signature px-4 py-2.5 text-center font-body text-sm font-semibold text-ink"
                 >
                   {t.nav.cta}
                 </a>

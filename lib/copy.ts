@@ -306,7 +306,8 @@ export const copy = {
     },
     contact: {
       label: "Kontakt",
-      title: "Řekněte nám, kde to bolí.",
+      title: "Řekněte nám, kde to",
+      titleAccent: "bolí.",
       sub: "Za 15 minut poznáme, jestli vám umíme pomoct. Nezávazný, přímý rozhovor o vašem provozu.",
       bookCall: "Rezervovat nezávaznou konzultaci",
       email: "info@zlepsimeto.cz",
@@ -642,7 +643,8 @@ export const copy = {
     },
     contact: {
       label: "Contact",
-      title: "Tell us where it hurts.",
+      title: "Tell us where it",
+      titleAccent: "hurts.",
       sub: "15 minutes is enough to know if we can help. A no-obligation, straightforward conversation about your operation.",
       bookCall: "Book a free intro call",
       email: "info@zlepsimeto.cz",

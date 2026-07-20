@@ -30,7 +30,8 @@ export default function Contact() {
           >
             <SectionLabel n="10">{c.label}</SectionLabel>
             <h2 className="mt-4 text-balance font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
-              {c.title}
+              {c.title}{" "}
+              <span className="font-serif italic text-signal">{c.titleAccent}</span>
             </h2>
             <p className="mt-5 max-w-md font-body text-white/55">{c.sub}</p>
 
@@ -140,7 +141,7 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="mt-2 flex items-center justify-center gap-2 rounded-full bg-white py-3.5 font-body text-sm font-semibold text-ink transition-transform duration-300 hover:scale-[1.02]"
+                  className="mt-2 flex items-center justify-center gap-2 rounded-full btn-signature py-3.5 font-body text-sm font-semibold text-ink transition-transform duration-300 hover:scale-[1.02]"
                 >
                   {c.form.submit}
                   <ArrowUpRight className="h-4 w-4" />

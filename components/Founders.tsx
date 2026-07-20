@@ -49,7 +49,7 @@ function FounderCard({
             {founder.role}
           </p>
         </div>
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-line bg-white/[0.02] font-display text-lg text-white/40">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-gold/30 bg-gold/[0.05] font-display text-lg text-gold/80">
           {initials}
         </div>
       </div>

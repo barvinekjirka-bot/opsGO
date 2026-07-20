@@ -64,14 +64,14 @@ export default function BusinessModel() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="mt-10 rounded-3xl border border-signal/20 bg-signal/[0.04] p-8"
+          className="mt-10 rounded-3xl border border-gold/20 bg-gold/[0.035] p-8"
         >
           <div className="flex flex-col gap-5 md:flex-row md:items-start md:gap-8">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-signal/30 bg-signal/[0.08]">
-              <ShieldCheck className="h-5 w-5 text-signal" strokeWidth={1.5} />
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-gold/30 bg-gold/[0.08]">
+              <ShieldCheck className="h-5 w-5 text-gold" strokeWidth={1.5} />
             </div>
             <div>
-              <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
+              <span className="font-mono text-[11px] uppercase tracking-widest2 text-gold">
                 {t.businessModel.guarantee.label}
               </span>
               <h3 className="mt-2 font-display text-xl font-semibold tracking-tight text-white sm:text-2xl">
