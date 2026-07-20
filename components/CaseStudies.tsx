@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Boxes, LineChart, Warehouse, GitBranch, Cpu, BarChart3 } from "lucide-react";
 import { useLang } from "@/lib/i18n";
+import SectionLabel from "./SectionLabel";
 
 const CASE_ICONS = [Boxes, LineChart, Warehouse, GitBranch, Cpu, BarChart3];
 const CASE_SIZES = ["lg", "sm", "sm", "sm", "sm", "lg"];
@@ -20,9 +21,7 @@ export default function CaseStudies() {
           transition={{ duration: 0.7 }}
           className="mb-14 max-w-2xl"
         >
-          <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
-            {t.caseStudies.label}
-          </span>
+          <SectionLabel n="09">{t.caseStudies.label}</SectionLabel>
           <h2 className="mt-4 text-balance font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             {t.caseStudies.title}
           </h2>

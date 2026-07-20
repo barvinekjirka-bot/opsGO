@@ -13,6 +13,7 @@ import {
   LineChart,
 } from "lucide-react";
 import { useLang } from "@/lib/i18n";
+import SectionLabel from "./SectionLabel";
 
 const SEGMENT_ICONS = [Warehouse, Factory, ShoppingCart];
 const SERVICE_ICONS = [ClipboardCheck, Boxes, LineChart, Cpu, BarChart3, TrendingUp];
@@ -30,9 +31,7 @@ export default function WhoWeHelpWhatWeDo() {
           transition={{ duration: 0.7 }}
           className="mb-14 max-w-2xl"
         >
-          <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
-            {t.whoWeHelp.label}
-          </span>
+          <SectionLabel n="02">{t.whoWeHelp.label}</SectionLabel>
           <h2 className="mt-4 text-balance font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             {t.whoWeHelp.title}
           </h2>
@@ -69,9 +68,7 @@ export default function WhoWeHelpWhatWeDo() {
           transition={{ duration: 0.7 }}
           className="mb-14 max-w-2xl"
         >
-          <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
-            {t.whatWeDo.label}
-          </span>
+          <SectionLabel n="03">{t.whatWeDo.label}</SectionLabel>
           <h2 className="mt-4 text-balance font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             {t.whatWeDo.title}
           </h2>

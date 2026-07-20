@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useLang } from "@/lib/i18n";
+import SectionLabel from "./SectionLabel";
 
 export default function ImpactMetrics() {
   const { t } = useLang();
@@ -16,9 +17,7 @@ export default function ImpactMetrics() {
           transition={{ duration: 0.7 }}
           className="mb-12 max-w-2xl"
         >
-          <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
-            {t.impact.label}
-          </span>
+          <SectionLabel n="07">{t.impact.label}</SectionLabel>
           <h2 className="mt-4 text-balance font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             {t.impact.title}
           </h2>

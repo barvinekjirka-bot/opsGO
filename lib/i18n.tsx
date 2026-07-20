@@ -21,13 +21,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("cs");
 
   useEffect(() => {
-    const stored = window.localStorage.getItem("opsgo-lang");
+    const stored = window.localStorage.getItem("zlepsimeto-lang");
     if (stored === "cs" || stored === "en") setLangState(stored);
   }, []);
 
   const setLang = (next: Lang) => {
     setLangState(next);
-    window.localStorage.setItem("opsgo-lang", next);
+    window.localStorage.setItem("zlepsimeto-lang", next);
     document.documentElement.lang = next;
   };
 

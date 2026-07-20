@@ -3,9 +3,9 @@ export type Lang = "cs" | "en";
 export const copy = {
   cs: {
     meta: {
-      title: "OpsGo — Výsledky, ne prezentace.",
+      title: "ZlepsimeTo — Výsledky, ne prezentace.",
       description:
-        "OpsGo je butikové provozní poradenství pro supply chain, sklady a plánování. Provozy jsme sami vedli — proto je umíme opravit. Měřitelné výsledky, ne prezentace.",
+        "ZlepsimeTo je butikové provozní poradenství pro supply chain, sklady a plánování. Provozy jsme sami vedli — proto je umíme opravit. Měřitelné výsledky, ne prezentace.",
     },
     nav: {
       links: [
@@ -26,12 +26,12 @@ export const copy = {
       ctaPrimary: "Nezávazná konzultace zdarma",
       ctaSecondary: "Jak pracujeme",
       readout: [
-        "ZÁSOBY −25 %",
+        "ZÁSOBY −30 %",
         "SERVICE LEVEL +11 P. B.",
         "CHYBY V PICKINGU −38 %",
         "ADOPCE ERP 96 %",
-        "ÚSPORY ~18 MIL. KČ / ROK",
-        "PŘESNOST PLÁNOVÁNÍ +19 %",
+        "130+ VEDENÝCH PROJEKTŮ",
+        "PŘESNOST PLÁNOVÁNÍ +20 %",
       ],
     },
     whyUs: {
@@ -79,7 +79,7 @@ export const copy = {
         { title: "Optimalizace zásob", desc: "Segmentace, pojistné zásoby, uvolnění vázané hotovosti." },
         { title: "Přesnost forecastu", desc: "Přestavba procesu demand & supply plánování." },
         { title: "ERP připravenost a stabilizace", desc: "Od chaosu po go-live k systému, kterému lidé věří." },
-        { title: "Power BI a dashboardy", desc: "Manažerská viditelnost místo ručních excelů." },
+        { title: "BI nástroje a dashboardy", desc: "Manažerská viditelnost místo ručních excelů." },
         { title: "Kontinuální zlepšování", desc: "KPI review, koučink a standardizované procesy." },
       ],
     },
@@ -117,7 +117,7 @@ export const copy = {
     methods: {
       label: "Metodiky a standardy",
       title: "Nejsme vázaní na jednu metodiku. Vybíráme nástroj podle problému.",
-      sub: "Přes 13 let praxe v provozu, plánování a projektovém řízení jsme si osvojili standardizované metody napříč obory. Používáme je tak, jak to dává smysl pro váš konkrétní provoz — ne podle toho, co je zrovna v módě.",
+      sub: "Za více než 25 let společné praxe v provozu, plánování a projektovém řízení jsme si osvojili standardizované metody napříč obory. Používáme je tak, jak to dává smysl pro váš konkrétní provoz — ne podle toho, co je zrovna v módě.",
       categories: [
         {
           title: "Continuous improvement a kvalita",
@@ -189,8 +189,8 @@ export const copy = {
       ],
       guarantee: {
         label: "Garance auditu",
-        title: "Nenajdeme aspoň 3 příležitosti ke zlepšení? Audit neplatíte.",
-        text: "Věříme tomu, co děláme. Pokud vám provozní audit neodhalí minimálně tři konkrétní, realizovatelné příležitosti ke zlepšení s vyčísleným odhadem přínosu, fakturu za audit nevystavíme.",
+        title: "Nenajdeme aspoň 3 příležitosti ke zlepšení? Podáme si ruce — a audit neplatíte.",
+        text: "Věříme tomu, co děláme. Pokud vám provozní audit neodhalí minimálně tři konkrétní, realizovatelné příležitosti ke zlepšení s vyčísleným odhadem přínosu, podáme si ruce, rozejdeme se jako profesionálové a fakturu za audit prostě nevystavíme. Žádné doúčtování, žádné skryté položky, žádné „náklady na cestu“.",
         note: "Garance platí pro audit v plném rozsahu — s přístupem do provozu a k provozním datům, která k vyhodnocení potřebujeme. Co se počítá jako „konkrétní, realizovatelná příležitost“, definujeme společně předem ve smlouvě: doporučení s popsaným postupem zavedení a odhadem přínosu.",
       },
     },
@@ -214,107 +214,81 @@ export const copy = {
     },
     founders: {
       label: "Kdo jsme",
-      title: "Dva provozáci. Dohromady přes 25 let v provozu i v datech.",
-      sub: "OpsGo založili a vedou lidé, kteří audity, implementace i go-live sami odpracovali — a vědí, co obnáší změna v reálném provozu.",
+      title: "Dva provozáci. Dohromady přes 25 let praxe a 130+ projektů.",
+      sub: "ZlepsimeTo založili a vedou lidé, kteří audity, implementace i go-live sami odpracovali — a vědí, co obnáší změna v reálném provozu.",
       jiri: {
         name: "Jiří Barvínek",
         role: "Spoluzakladatel — Plánování & Supply Chain",
-        bio: "Senior supply chain profesionál s více než 13 lety praxe. Kombinuje provozní zkušenost z první linie se silnou datovou analytikou (Power BI, SQL, Excel). Zaměřuje se na výkon supply chainu skrze plánování, optimalizaci procesů a rozhodování postavené na datech — od skladové podlahy v DHL po implementaci plánovacího systému napříč CEE regionem v Intersnacku.",
-        experience: [
+        bio: "Senior supply chain profesionál s více než 13 lety praxe v logistice, plánování a implementacích systémů. Kombinuje provozní zkušenost z první linie se silnou datovou analytikou (BI nástroje, SQL, pokročilý Excel). Specializuje se na demand & supply planning, plánování výroby a zavádění plánovacích systémů v mezinárodním prostředí.",
+        highlights: [
           {
-            role: "CEE Key User Planning Manager",
-            company: "Intersnack, Praha",
-            period: "Dub 2025 — dosud",
-            desc: "Vede implementaci plánovacího systému napříč CEE regionem. Key user pro demand, supply planning a rozvrhování výroby. Integrace byznysu a systému, standardizace procesů napříč trhy.",
+            title: "Implementace plánovacích systémů",
+            desc: "Zavádění a standardizace plánovacích procesů a systémů napříč středoevropským regionem.",
           },
           {
-            role: "Planning Manager CZ/SK",
-            company: "Intersnack, Choustník / Praha / Trenčín",
-            period: "Lis 2023 — Dub 2025",
-            desc: "Odpovědnost za demand, supply a plánování výroby. Koordinace výroby, zásobování a exekuce, zlepšení viditelnosti plánování a stability procesů.",
+            title: "Demand & supply planning",
+            desc: "Vedení plánování poptávky, zásobování a výroby v rychloobrátkovém prostředí.",
           },
           {
-            role: "Administration Manager",
-            company: "DHL, Jažlovice",
-            period: "Čvc 2020 — Říj 2023",
-            desc: "Zástup za Operations Managera / Site Planning Managera. Vedl návrh a implementaci WMS (Blue Yonder). Řídil provozní a procesní projekty.",
+            title: "WMS od návrhu po provoz",
+            desc: "Návrh a implementace skladového systému ve velkém logistickém provozu.",
           },
           {
-            role: "Administration Supervisor → Team Leader → Administration Clerk",
-            company: "DHL, Jažlovice",
-            period: "Dub 2014 — Čvn 2020",
-            desc: "Od administrativní podpory přes vedení týmů v inbound/outbound operativě po vedení administrativního týmu — včetně podpory implementace TMS.",
+            title: "Reporting v BI nástrojích",
+            desc: "Budování manažerského reportingu, který nahrazuje ruční excely.",
           },
         ],
         stats: [
           {
-            value: "25 %",
-            label: "Snížení zásob hotových výrobků",
+            value: "50+",
+            label: "vedených projektů",
           },
           {
-            value: "~18 mil. Kč",
-            label: "Úspory proti předchozímu roku",
+            value: "−30 %",
+            label: "snížení zásob hotových výrobků",
           },
           {
-            value: "Top 10",
-            label: "Talent program DHL CZ",
+            value: "+20 %",
+            label: "zlepšení přesnosti plánování",
           },
         ],
       },
       juraj: {
         name: "Juraj Komár",
         role: "Spoluzakladatel — Provozní transformace & Logistika",
-        bio: "Senior operations a logistický profesionál s více než 11 lety zkušeností. Kombinuje provozní řízení s praktickými zkušenostmi z distribučních center a transformačních projektů. Zaměřuje se na zvyšování produktivity, optimalizaci logistických procesů a snižování provozních nákladů — od návrhu skladových layoutů a implementace WMS až po řízení komplexních transformačních projektů a implementací nových zákazníků.",
-        experience: [
+        bio: "Senior operations a logistický profesionál s více než 11 lety zkušeností. Kombinuje provozní řízení s praktickými zkušenostmi z distribučních center a transformačních projektů. Zaměřuje se na zvyšování produktivity, optimalizaci logistických procesů a snižování provozních nákladů.",
+        highlights: [
           {
-            role: "Vedoucí divize DIO | Procesní specialista",
-            company: "3K značky s.r.o., Praha",
-            period: "Bře 2025 — dosud",
-            desc: "Komplexní řízení divize přechodného dopravního značení. Odpovědnost za provoz, logistiku, plánování kapacit, projektové řízení a digitalizaci procesů. Implementace WMS a optimalizace skladového hospodářství.",
+            title: "Řízení distribučních center",
+            desc: "Vedení multiklientského provozu s plnou odpovědností za P&L, rozpočty a výkonnost.",
           },
           {
-            role: "Manažer správy budov a infrastruktury",
-            company: "DHL Solutions k.s., Jažlovice",
-            period: "Říj 2024 — Úno 2025",
-            desc: "Řídil správu logistického areálu o rozloze 56 000 m². Odpovědnost za technickou infrastrukturu, koordinaci dodavatelů, investice a zajištění plynulého provozu jednoho z největších logistických areálů společnosti DHL v České republice.",
+            title: "Implementace nových zákazníků",
+            desc: "Od návrhu logistických procesů přes spuštění provozu po stabilizaci výkonu.",
           },
           {
-            role: "Provozní ředitel logistického centra",
-            company: "DHL Solutions k.s., Jažlovice",
-            period: "Úno 2020 — Zář 2024",
-            desc: "Řídil multiklientské distribuční centrum o rozloze 20 000 m² s provozem pro 15+ zákazníků. Odpovídal za P&L, rozpočty, plánování kapacit a vedení provozních týmů. Vedl implementaci 3 nových zákazníků včetně návrhu procesů, spuštění provozu a stabilizace výkonu. Řídil migraci WMS Blue Yonder společně s migrací ERP systémů zákazníků — bez omezení provozu.",
+            title: "Migrace WMS a ERP",
+            desc: "Řízení systémových migrací bez omezení běžícího provozu.",
           },
           {
-            role: "Procesní specialista",
-            company: "DHL Solutions k.s., Jažlovice",
-            period: "Čvn 2014 — Led 2020",
-            desc: "Projektový management a procesní optimalizace s využitím metodik Lean a DMAIC. Návrhy skladových layoutů, implementace WMS, automatizace logistických procesů a zavádění paperless pickingu.",
+            title: "Lean a DMAIC v praxi",
+            desc: "Procesní optimalizace, automatizace a paperless picking ve skladových provozech.",
           },
         ],
         stats: [
           {
-            value: "3",
-            label: "Implementace nových zákazníků od návrhu po stabilizaci",
+            value: "80+",
+            label: "vedených projektů",
           },
           {
             value: "15+",
-            label: "Zákazníků v multiklientském provozu",
-          },
-          {
-            value: "20 000 m²",
-            label: "Řízené distribuční centrum vč. P&L",
+            label: "zákazníků v multiklientském provozu",
           },
           {
             value: "56 000 m²",
-            label: "Spravovaný logistický areál",
+            label: "řízených logistických ploch",
           },
         ],
-      },
-      award: {
-        label: "Týmové ocenění 2025",
-        text: "Podíl na transformaci národního supply chainu z nejslabšího na jeden z nejvýkonnějších v CEE regionu — špičkový výkon napříč klíčovými KPI, doručený silným cross-funkčním týmem.",
-        value: "~18 mil. Kč",
-        valueSub: "měřitelné úspory proti předchozímu roku",
       },
     },
     caseStudies: {
@@ -327,7 +301,7 @@ export const copy = {
         { tag: "Sklad", title: "Optimalizace skladu", desc: "Redesign layoutu a slottingu pro vyšší hustotu pickingu." },
         { tag: "Plánování", title: "Transformace plánování", desc: "Standardizace demand, supply a výrobního plánování napříč CEE." },
         { tag: "Systémy", title: "Implementace ERP", desc: "Stabilizace WMS/ERP go-live — z chaosu k denní spolehlivosti." },
-        { tag: "Reporting", title: "Power BI dashboardy", desc: "Manažerská viditelnost místo ručního reportování v excelech." },
+        { tag: "Reporting", title: "BI dashboardy", desc: "Manažerská viditelnost místo ručního reportování v excelech." },
       ],
     },
     contact: {
@@ -335,7 +309,7 @@ export const copy = {
       title: "Řekněte nám, kde to bolí.",
       sub: "Za 15 minut poznáme, jestli vám umíme pomoct. Nezávazný, přímý rozhovor o vašem provozu.",
       bookCall: "Rezervovat nezávaznou konzultaci",
-      email: "hello@opsgo.cz",
+      email: "info@zlepsimeto.cz",
       linkedin: "Spojit se na LinkedIn",
       form: {
         name: "Jméno",
@@ -359,9 +333,9 @@ export const copy = {
   },
   en: {
     meta: {
-      title: "OpsGo — Results, not presentations.",
+      title: "ZlepsimeTo — Results, not presentations.",
       description:
-        "OpsGo is a boutique operations consultancy for supply chain, warehousing and planning. We've run the operations we now fix — measurable results, not presentations.",
+        "ZlepsimeTo is a boutique operations consultancy for supply chain, warehousing and planning. We've run the operations we now fix — measurable results, not presentations.",
     },
     nav: {
       links: [
@@ -382,12 +356,12 @@ export const copy = {
       ctaPrimary: "Book Free Intro Call",
       ctaSecondary: "How We Work",
       readout: [
-        "INVENTORY −25%",
+        "INVENTORY −30%",
         "SERVICE LEVEL +11 PTS",
         "PICKING ERRORS −38%",
         "ERP ADOPTION 96%",
-        "SAVINGS ~€700K / YR",
-        "PLANNING ACCURACY +19%",
+        "130+ PROJECTS DELIVERED",
+        "PLANNING ACCURACY +20%",
       ],
     },
     whyUs: {
@@ -435,7 +409,7 @@ export const copy = {
         { title: "Inventory Optimization", desc: "Segmentation, safety stock, and cash release." },
         { title: "Forecast Accuracy", desc: "Demand & supply planning process rebuild." },
         { title: "ERP Readiness & Stabilization", desc: "From go-live chaos to a system people trust." },
-        { title: "Power BI & Dashboards", desc: "Management visibility that replaces spreadsheets." },
+        { title: "BI Tools & Dashboards", desc: "Management visibility that replaces spreadsheets." },
         { title: "Continuous Improvement", desc: "KPI reviews, coaching, and standardized processes." },
       ],
     },
@@ -473,7 +447,7 @@ export const copy = {
     methods: {
       label: "Methods & Standards",
       title: "We're not tied to one methodology. We pick the tool that fits the problem.",
-      sub: "Over 13+ years in operations, planning, and project management, we've built fluency across standardized methods from several disciplines. We apply them the way that makes sense for your operation — not whatever happens to be trending.",
+      sub: "Across 25+ combined years in operations, planning, and project management, we've built fluency across standardized methods from several disciplines. We apply them the way that makes sense for your operation — not whatever happens to be trending.",
       categories: [
         {
           title: "Continuous Improvement & Quality",
@@ -545,8 +519,8 @@ export const copy = {
       ],
       guarantee: {
         label: "Audit Guarantee",
-        title: "Fewer than 3 improvement opportunities found? The audit is free.",
-        text: "We stand behind our work. If your operational audit doesn't surface at least three specific, actionable improvement opportunities with a quantified benefit estimate, we won't invoice the audit.",
+        title: "Fewer than 3 improvement opportunities found? We shake hands — and you don't pay.",
+        text: "We stand behind our work. If your operational audit doesn't surface at least three specific, actionable improvement opportunities with a quantified benefit estimate, we shake hands, part as professionals, and simply never issue the invoice. No back-billing, no hidden items, no “travel costs”.",
         note: "The guarantee applies to a full-scope audit — with access to the operation and the operational data we need for the assessment. What counts as a “specific, actionable opportunity” is defined together upfront in the agreement: a recommendation with a described implementation path and an estimated benefit.",
       },
     },
@@ -570,107 +544,81 @@ export const copy = {
     },
     founders: {
       label: "Who We Are",
-      title: "Two operators. 25+ combined years on the floor and in the data.",
-      sub: "OpsGo is founded and run by people who did the audits, implementations, and go-lives themselves — and know what change takes in a real operation.",
+      title: "Two operators. 25+ combined years and 130+ projects.",
+      sub: "ZlepsimeTo is founded and run by people who did the audits, implementations, and go-lives themselves — and know what change takes in a real operation.",
       jiri: {
         name: "Jiří Barvínek",
         role: "Co-Founder — Planning & Supply Chain",
-        bio: "Senior supply chain professional with 13+ years of experience, combining hands-on operational expertise with strong data analytics (Power BI, SQL, Excel). Focused on improving supply chain performance through planning, process optimization, and data-driven decision making — from the DHL warehouse floor to CEE-wide planning system implementation at Intersnack.",
-        experience: [
+        bio: "Senior supply chain professional with 13+ years of experience in logistics, planning, and system implementations. Combines hands-on operational expertise with strong data analytics (BI tools, SQL, advanced Excel). Specializes in demand & supply planning, production planning, and planning system rollouts in an international environment.",
+        highlights: [
           {
-            role: "CEE Key User Planning Manager",
-            company: "Intersnack, Prague",
-            period: "Apr 2025 — Present",
-            desc: "Leading the planning system implementation across the CEE region. Key user for demand, supply planning, and production scheduling. Business and system integration, process standardization across markets.",
+            title: "Planning system implementations",
+            desc: "Rolling out and standardizing planning processes and systems across the Central European region.",
           },
           {
-            role: "Planning Manager CZ/SK",
-            company: "Intersnack, Choustník / Prague / Trenčín",
-            period: "Nov 2023 — Apr 2025",
-            desc: "Responsible for demand, supply and production planning. Coordinated production, supply and execution, and improved planning visibility and process stability.",
+            title: "Demand & supply planning",
+            desc: "Leading demand, supply, and production planning in a fast-moving goods environment.",
           },
           {
-            role: "Administration Manager",
-            company: "DHL, Jažlovice",
-            period: "Jul 2020 — Oct 2023",
-            desc: "Acted as Operations Manager / Site Planning Manager cover. Led WMS design and implementation (Blue Yonder). Managed operational and process-related projects.",
+            title: "WMS from design to operation",
+            desc: "Designing and implementing a warehouse management system in a large logistics operation.",
           },
           {
-            role: "Administration Supervisor → Team Leader → Administration Clerk",
-            company: "DHL, Jažlovice",
-            period: "Apr 2014 — Jun 2020",
-            desc: "Progressed from administrative support through team leadership in inbound/outbound operations to supervising the administration team — supporting a TMS implementation along the way.",
+            title: "Reporting in BI tools",
+            desc: "Building management reporting that replaces manual spreadsheets.",
           },
         ],
         stats: [
           {
-            value: "25%",
-            label: "Finished goods inventory reduced",
+            value: "50+",
+            label: "projects delivered",
           },
           {
-            value: "~€700K",
-            label: "Savings vs. prior year",
+            value: "−30%",
+            label: "finished goods inventory reduction",
           },
           {
-            value: "Top 10",
-            label: "DHL CZ Talent Program",
+            value: "+20%",
+            label: "planning accuracy improvement",
           },
         ],
       },
       juraj: {
         name: "Juraj Komár",
         role: "Co-Founder — Operations Transformation & Logistics",
-        bio: "Senior operations and logistics professional with 11+ years of experience. Combines operational leadership with hands-on experience from distribution centers and transformation projects. Focused on productivity improvement, logistics process optimization, and reducing operating costs — from warehouse layout design and WMS implementation to managing complex transformation projects and new customer implementations.",
-        experience: [
+        bio: "Senior operations and logistics professional with 11+ years of experience. Combines operational leadership with hands-on experience from distribution centers and transformation projects. Focused on productivity improvement, logistics process optimization, and reducing operating costs.",
+        highlights: [
           {
-            role: "Head of DIO Division | Process Specialist",
-            company: "3K značky s.r.o., Prague",
-            period: "Mar 2025 — Present",
-            desc: "End-to-end management of the temporary traffic signage division. Responsible for operations, logistics, capacity planning, project management, and process digitalization. WMS implementation and warehouse management optimization.",
+            title: "Distribution center management",
+            desc: "Leading a multi-client operation with full P&L, budget, and performance responsibility.",
           },
           {
-            role: "Facility & Infrastructure Manager",
-            company: "DHL Solutions k.s., Jažlovice",
-            period: "Oct 2024 — Feb 2025",
-            desc: "Managed a 56,000 m² logistics campus. Responsible for technical infrastructure, supplier coordination, investments, and the smooth running of one of DHL's largest logistics sites in the Czech Republic.",
+            title: "New customer implementations",
+            desc: "From logistics process design through ramp-up to performance stabilization.",
           },
           {
-            role: "Operations Director, Logistics Center",
-            company: "DHL Solutions k.s., Jažlovice",
-            period: "Feb 2020 — Sep 2024",
-            desc: "Ran a 20,000 m² multi-client distribution center serving 15+ customers. Owned P&L, budgets, capacity planning, and leadership of operations teams. Led the implementation of 3 new customers including process design, ramp-up, and performance stabilization. Managed the Blue Yonder WMS migration alongside customers' ERP migrations — with no operational downtime.",
+            title: "WMS and ERP migrations",
+            desc: "Managing system migrations with no disruption to a running operation.",
           },
           {
-            role: "Process Specialist",
-            company: "DHL Solutions k.s., Jažlovice",
-            period: "Jun 2014 — Jan 2020",
-            desc: "Project management and process optimization using Lean and DMAIC. Warehouse layout design, WMS implementation, logistics process automation, and paperless picking rollout.",
+            title: "Lean and DMAIC in practice",
+            desc: "Process optimization, automation, and paperless picking in warehouse operations.",
           },
         ],
         stats: [
           {
-            value: "3",
-            label: "New customer implementations, design to stabilization",
+            value: "80+",
+            label: "projects delivered",
           },
           {
             value: "15+",
-            label: "Customers in a multi-client operation",
-          },
-          {
-            value: "20,000 m²",
-            label: "Distribution center run incl. P&L",
+            label: "customers in a multi-client operation",
           },
           {
             value: "56,000 m²",
-            label: "Logistics campus managed",
+            label: "of logistics space managed",
           },
         ],
-      },
-      award: {
-        label: "2025 Team Award",
-        text: "Contributed to transforming a national supply chain from the lowest-performing to one of the best-performing in the CEE region — top performance across key KPIs, delivered by a high-performing cross-functional team.",
-        value: "~€700K",
-        valueSub: "measurable savings vs. prior year",
       },
     },
     caseStudies: {
@@ -683,7 +631,7 @@ export const copy = {
         { tag: "Warehousing", title: "Warehouse Optimization", desc: "Layout and slotting redesign for higher pick density." },
         { tag: "Planning", title: "Planning Transformation", desc: "CEE-wide standardization of demand, supply, and production planning." },
         { tag: "Systems", title: "ERP Implementation", desc: "WMS/ERP go-live stabilization — from chaos to daily reliability." },
-        { tag: "Reporting", title: "Power BI Dashboards", desc: "Management visibility replacing manual spreadsheet reporting." },
+        { tag: "Reporting", title: "BI Dashboards", desc: "Management visibility replacing manual spreadsheet reporting." },
       ],
     },
     contact: {
@@ -691,7 +639,7 @@ export const copy = {
       title: "Tell us where it hurts.",
       sub: "15 minutes is enough to know if we can help. A no-obligation, straightforward conversation about your operation.",
       bookCall: "Book a free intro call",
-      email: "hello@opsgo.cz",
+      email: "info@zlepsimeto.cz",
       linkedin: "Connect on LinkedIn",
       form: {
         name: "Name",

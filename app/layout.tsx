@@ -38,9 +38,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "OpsGo — Výsledky, ne prezentace.",
+  title: "ZlepsimeTo — Výsledky, ne prezentace.",
   description:
-    "OpsGo je butikové provozní poradenství pro supply chain, sklady a plánování. Provozy jsme sami vedli — proto je umíme opravit. Měřitelné výsledky, ne prezentace.",
+    "ZlepsimeTo je butikové provozní poradenství pro supply chain, sklady a plánování. Provozy jsme sami vedli — proto je umíme opravit. Měřitelné výsledky, ne prezentace.",
   keywords: [
     "provozní poradenství",
     "supply chain consulting",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     "plánování výroby",
   ],
   openGraph: {
-    title: "OpsGo — Výsledky, ne prezentace.",
+    title: "ZlepsimeTo — Výsledky, ne prezentace.",
     description: "Najdeme, kde váš provoz ztrácí peníze.",
     type: "website",
   },

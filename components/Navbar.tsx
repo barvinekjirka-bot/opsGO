@@ -57,7 +57,7 @@ export default function Navbar() {
         >
           <a href="#top" className="flex items-baseline gap-0.5">
             <span className="font-display text-[16px] font-semibold tracking-tight text-white">
-              OpsGo
+              ZlepsimeTo
             </span>
             <span className="h-[5px] w-[5px] rounded-full bg-signal shadow-[0_0_10px_2px_rgba(255,122,26,0.55)]" />
           </a>

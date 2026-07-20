@@ -6,15 +6,16 @@ import {
   TrendingUp,
   Users,
   Rocket,
-  Building2,
   Warehouse,
+  Briefcase,
   type LucideIcon,
 } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import type { Copy } from "@/lib/copy";
+import SectionLabel from "./SectionLabel";
 
-const JIRI_STAT_ICONS: LucideIcon[] = [TrendingDown, TrendingUp, Users];
-const JURAJ_STAT_ICONS: LucideIcon[] = [Rocket, Users, Warehouse, Building2];
+const JIRI_STAT_ICONS: LucideIcon[] = [Briefcase, TrendingDown, TrendingUp];
+const JURAJ_STAT_ICONS: LucideIcon[] = [Rocket, Users, Warehouse];
 
 type Founder =
   | Copy["founders"]["jiri"]
@@ -37,7 +38,7 @@ function FounderCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.7, delay }}
-      className="liquid-glass rounded-3xl p-8"
+      className="liquid-glass flex flex-col rounded-3xl p-8"
     >
       <div className="flex items-start justify-between gap-4">
         <div>
@@ -57,32 +58,25 @@ function FounderCard({
         {founder.bio}
       </p>
 
-      <div className="mt-7 space-y-5 border-t border-line pt-6">
-        {founder.experience.map((exp) => (
-          <div key={exp.role} className="grid grid-cols-[92px_1fr] gap-4">
-            <span className="font-mono text-[11px] leading-relaxed text-white/35">
-              {exp.period}
-            </span>
-            <div>
+      {/* Experience highlights on the signal rail */}
+      <div className="relative mt-7 flex-1 border-t border-line pt-6">
+        <div className="absolute bottom-0 left-[3px] top-6 w-px bg-gradient-to-b from-signal/60 via-signal/25 to-transparent" />
+        <div className="space-y-5">
+          {founder.highlights.map((h) => (
+            <div key={h.title} className="relative pl-6">
+              <span className="absolute left-0 top-[7px] h-[7px] w-[7px] rounded-full border border-signal/70 bg-ink" />
               <p className="font-body text-sm font-semibold text-white/90">
-                {exp.role}
+                {h.title}
               </p>
-              <p className="font-mono text-[11px] text-white/40">
-                {exp.company}
-              </p>
-              <p className="mt-1.5 font-body text-[13px] leading-relaxed text-white/50">
-                {exp.desc}
+              <p className="mt-1 font-body text-[13px] leading-relaxed text-white/50">
+                {h.desc}
               </p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      <div
-        className={`mt-7 grid gap-4 border-t border-line pt-6 ${
-          founder.stats.length === 4 ? "grid-cols-2" : "grid-cols-3"
-        }`}
-      >
+      <div className="mt-7 grid grid-cols-3 gap-4 border-t border-line pt-6">
         {founder.stats.map((stat, i) => {
           const Icon = statIcons[i];
           return (
@@ -116,16 +110,14 @@ export default function Founders() {
           transition={{ duration: 0.7 }}
           className="mb-14 max-w-2xl"
         >
-          <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
-            {f.label}
-          </span>
+          <SectionLabel n="08">{f.label}</SectionLabel>
           <h2 className="mt-4 text-balance font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             {f.title}
           </h2>
           <p className="mt-5 font-body text-white/55">{f.sub}</p>
         </motion.div>
 
-        <div className="grid items-start gap-5 lg:grid-cols-2">
+        <div className="grid items-stretch gap-5 lg:grid-cols-2">
           <FounderCard founder={f.jiri} initials="JB" statIcons={JIRI_STAT_ICONS} />
           <FounderCard
             founder={f.juraj}
@@ -134,34 +126,6 @@ export default function Founders() {
             delay={0.1}
           />
         </div>
-
-        {/* Team achievement highlight */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7 }}
-          className="mt-5 rounded-3xl border border-signal/20 bg-signal/[0.04] p-8"
-        >
-          <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
-                {f.award.label}
-              </span>
-              <p className="mt-2 max-w-xl font-body text-sm leading-relaxed text-white/70">
-                {f.award.text}
-              </p>
-            </div>
-            <div className="text-left sm:text-right">
-              <p className="whitespace-nowrap font-mono text-3xl font-semibold text-white">
-                {f.award.value}
-              </p>
-              <p className="font-body text-[12px] text-white/45">
-                {f.award.valueSub}
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

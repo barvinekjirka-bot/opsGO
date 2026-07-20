@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useLang } from "@/lib/i18n";
+import SectionLabel from "./SectionLabel";
 
 export default function HowWeWork() {
   const ref = useRef<HTMLDivElement>(null);
@@ -25,9 +26,7 @@ export default function HowWeWork() {
           transition={{ duration: 0.7 }}
           className="mx-auto mb-16 text-balance text-center md:mb-20"
         >
-          <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
-            {t.howWeWork.label}
-          </span>
+          <SectionLabel n="04" center>{t.howWeWork.label}</SectionLabel>
           <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             {t.howWeWork.title}
           </h2>

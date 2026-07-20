@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Layers, Route, ClipboardList } from "lucide-react";
 import { useLang } from "@/lib/i18n";
+import SectionLabel from "./SectionLabel";
 
 const CATEGORY_ICONS = [Layers, Route, ClipboardList];
 
@@ -20,9 +21,7 @@ export default function Methods() {
           transition={{ duration: 0.7 }}
           className="mb-16 max-w-2xl"
         >
-          <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
-            {m.label}
-          </span>
+          <SectionLabel n="05">{m.label}</SectionLabel>
           <h2 className="mt-4 text-balance font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             {m.title}
           </h2>

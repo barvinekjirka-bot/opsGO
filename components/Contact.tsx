@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, Linkedin, Mail } from "lucide-react";
 import { useLang } from "@/lib/i18n";
+import SectionLabel from "./SectionLabel";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -27,9 +28,7 @@ export default function Contact() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
           >
-            <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
-              {c.label}
-            </span>
+            <SectionLabel n="10">{c.label}</SectionLabel>
             <h2 className="mt-4 text-balance font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
               {c.title}
             </h2>

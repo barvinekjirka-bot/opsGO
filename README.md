@@ -1,6 +1,6 @@
-# OpsGo — Website
+# ZlepsimeTo — Website
 
-Premium, dark-mode, scroll-driven marketing site for OpsGo (boutique supply
+Premium, dark-mode, scroll-driven marketing site for ZlepsimeTo (boutique supply
 chain / operations consulting), built with Next.js 15 App Router, TypeScript,
 Tailwind CSS, and Framer Motion.
 
@@ -36,7 +36,7 @@ Open http://localhost:3000.
 5. **Booking link** — replace the `href="#"` on the booking CTA with your
    real Calendly/Cal.com link (appears in `Navbar.tsx`, `Hero.tsx`, and
    `Contact.tsx`).
-6. **Domain-specific links** — LinkedIn URL and the `hello@opsgo.cz`
+6. **Domain-specific links** — LinkedIn URL and the `info@zlepsimeto.cz`
    email in `lib/copy.ts` (update once the real domain is registered).
 
 ## Structure

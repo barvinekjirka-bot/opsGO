@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
 import { useLang } from "@/lib/i18n";
+import SectionLabel from "./SectionLabel";
 
 export default function BusinessModel() {
   const { t } = useLang();
@@ -17,9 +18,7 @@ export default function BusinessModel() {
           transition={{ duration: 0.7 }}
           className="mb-14 max-w-2xl"
         >
-          <span className="font-mono text-[11px] uppercase tracking-widest2 text-signal">
-            {t.businessModel.label}
-          </span>
+          <SectionLabel n="06">{t.businessModel.label}</SectionLabel>
           <h2 className="mt-4 text-balance font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             {t.businessModel.title}
           </h2>
