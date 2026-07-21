@@ -2,20 +2,48 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Calendar, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Linkedin, Mail } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import SectionLabel from "./SectionLabel";
 
+// Free form-relay service (web3forms.com) — no backend needed since the
+// site is a static export. Replace with your own access key from
+// https://web3forms.com (free, just an email address, no account/card).
+const WEB3FORMS_ACCESS_KEY = "REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY";
+
+type Status = "idle" | "sending" | "sent" | "error";
+
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
   const { t } = useLang();
   const c = t.contact;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Wire up to your form handler / CRM endpoint here.
-    setSubmitted(true);
+    setStatus("sending");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Nová poptávka z webu — ${form.name}`,
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          message: form.message,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("sent");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -37,16 +65,6 @@ export default function Contact() {
 
             <div className="mt-10 flex flex-col gap-4">
               <a
-                href="#"
-                className="liquid-glass flex items-center justify-between rounded-2xl p-5 transition-colors hover:bg-white/[0.04]"
-              >
-                <span className="flex items-center gap-3 font-body text-sm text-white/80">
-                  <Calendar className="h-4 w-4 text-signal" />
-                  {c.bookCall}
-                </span>
-                <ArrowUpRight className="h-4 w-4 text-white/40" />
-              </a>
-              <a
                 href={`mailto:${c.email}`}
                 className="liquid-glass flex items-center justify-between rounded-2xl p-5 transition-colors hover:bg-white/[0.04]"
               >
@@ -57,7 +75,9 @@ export default function Contact() {
                 <ArrowUpRight className="h-4 w-4 text-white/40" />
               </a>
               <a
-                href="#"
+                href={c.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="liquid-glass flex items-center justify-between rounded-2xl p-5 transition-colors hover:bg-white/[0.04]"
               >
                 <span className="flex items-center gap-3 font-body text-sm text-white/80">
@@ -76,7 +96,7 @@ export default function Contact() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="liquid-glass rounded-3xl p-8"
           >
-            {submitted ? (
+            {status === "sent" ? (
               <div className="flex h-full flex-col items-center justify-center py-16 text-center">
                 <span className="h-2 w-2 animate-pulseSignal rounded-full bg-signal" />
                 <p className="mt-5 font-display text-lg font-semibold text-white">
@@ -139,11 +159,15 @@ export default function Contact() {
                     placeholder={c.form.messagePlaceholder}
                   />
                 </div>
+                {status === "error" && (
+                  <p className="font-body text-[13px] text-red-400">{c.form.error}</p>
+                )}
                 <button
                   type="submit"
-                  className="mt-2 flex items-center justify-center gap-2 rounded-full btn-signature py-3.5 font-body text-sm font-semibold text-ink transition-transform duration-300 hover:scale-[1.02]"
+                  disabled={status === "sending"}
+                  className="mt-2 flex items-center justify-center gap-2 rounded-full btn-signature py-3.5 font-body text-sm font-semibold text-ink transition-transform duration-300 hover:scale-[1.02] disabled:opacity-60 disabled:hover:scale-100"
                 >
-                  {c.form.submit}
+                  {status === "sending" ? c.form.sending : c.form.submit}
                   <ArrowUpRight className="h-4 w-4" />
                 </button>
               </form>

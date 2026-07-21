@@ -26,10 +26,9 @@ export const copy = {
       ctaPrimary: "Nezávazná konzultace zdarma",
       ctaSecondary: "Jak pracujeme",
       readout: [
-        "ZÁSOBY −30 %",
+        "ZÁSOBY −27 %",
         "SERVICE LEVEL +11 P. B.",
         "CHYBY V PICKINGU −38 %",
-        "ADOPCE ERP 96 %",
         "130+ VEDENÝCH PROJEKTŮ",
         "PŘESNOST PLÁNOVÁNÍ +20 %",
       ],
@@ -218,8 +217,8 @@ export const copy = {
       sub: "ZlepsimeTo založili a vedou lidé, kteří audity, implementace i go-live sami odpracovali — a vědí, co obnáší změna v reálném provozu.",
       jiri: {
         name: "Jiří Barvínek",
-        role: "Spoluzakladatel — Plánování & Supply Chain",
-        bio: "Senior supply chain profesionál s více než 13 lety praxe v logistice, plánování a implementacích systémů. Kombinuje provozní zkušenost z první linie se silnou datovou analytikou (BI nástroje, SQL, pokročilý Excel). Specializuje se na demand & supply planning, plánování výroby a zavádění plánovacích systémů v mezinárodním prostředí.",
+        role: "Spoluzakladatel — Plánování, Supply Chain & AI",
+        bio: "Senior supply chain profesionál s více než 13 lety praxe v logistice, plánování a implementacích systémů. Kombinuje provozní zkušenost z první linie se silnou datovou analytikou a nasazením AI nástrojů (BI nástroje, SQL, pokročilý Excel). Specializuje se na demand & supply planning, plánování výroby, zavádění plánovacích systémů a využití AI ve firemních procesech.",
         highlights: [
           {
             title: "Implementace plánovacích systémů",
@@ -234,6 +233,10 @@ export const copy = {
             desc: "Návrh a implementace skladového systému ve velkém logistickém provozu.",
           },
           {
+            title: "AI ve firemních procesech",
+            desc: "Nasazení AI nástrojů pro analýzu dat, automatizaci reportingu a podporu rozhodování.",
+          },
+          {
             title: "Reporting v BI nástrojích",
             desc: "Budování manažerského reportingu, který nahrazuje ruční excely.",
           },
@@ -244,7 +247,7 @@ export const copy = {
             label: "vedených projektů",
           },
           {
-            value: "−30 %",
+            value: "−27 %",
             label: "snížení zásob hotových výrobků",
           },
           {
@@ -309,9 +312,9 @@ export const copy = {
       title: "Řekněte nám, kde to",
       titleAccent: "bolí.",
       sub: "Za 15 minut poznáme, jestli vám umíme pomoct. Nezávazný, přímý rozhovor o vašem provozu.",
-      bookCall: "Rezervovat nezávaznou konzultaci",
       email: "info@zlepsimeto.cz",
       linkedin: "Spojit se na LinkedIn",
+      linkedinUrl: "https://www.linkedin.com/in/ji%C5%99%C3%AD-barv%C3%ADnek-156778101/",
       form: {
         name: "Jméno",
         namePlaceholder: "Vaše jméno",
@@ -322,8 +325,10 @@ export const copy = {
         message: "Co nefunguje?",
         messagePlaceholder: "Popište nám krátce váš provoz.",
         submit: "Odeslat zprávu",
+        sending: "Odesílám…",
         sentTitle: "Zpráva odeslána.",
         sentSub: "Ozveme se do jednoho pracovního dne.",
+        error: "Něco se nepovedlo. Zkuste to prosím znovu, nebo nám napište přímo na e-mail.",
       },
     },
     footer: {
@@ -363,10 +368,9 @@ export const copy = {
       ctaPrimary: "Book Free Intro Call",
       ctaSecondary: "How We Work",
       readout: [
-        "INVENTORY −30%",
+        "INVENTORY −27%",
         "SERVICE LEVEL +11 PTS",
         "PICKING ERRORS −38%",
-        "ERP ADOPTION 96%",
         "130+ PROJECTS DELIVERED",
         "PLANNING ACCURACY +20%",
       ],
@@ -555,8 +559,8 @@ export const copy = {
       sub: "ZlepsimeTo is founded and run by people who did the audits, implementations, and go-lives themselves — and know what change takes in a real operation.",
       jiri: {
         name: "Jiří Barvínek",
-        role: "Co-Founder — Planning & Supply Chain",
-        bio: "Senior supply chain professional with 13+ years of experience in logistics, planning, and system implementations. Combines hands-on operational expertise with strong data analytics (BI tools, SQL, advanced Excel). Specializes in demand & supply planning, production planning, and planning system rollouts in an international environment.",
+        role: "Co-Founder — Planning, Supply Chain & AI",
+        bio: "Senior supply chain professional with 13+ years of experience in logistics, planning, and system implementations. Combines hands-on operational expertise with strong data analytics and applied AI (BI tools, SQL, advanced Excel). Specializes in demand & supply planning, production planning, planning system rollouts, and applying AI across business processes.",
         highlights: [
           {
             title: "Planning system implementations",
@@ -571,6 +575,10 @@ export const copy = {
             desc: "Designing and implementing a warehouse management system in a large logistics operation.",
           },
           {
+            title: "AI in business processes",
+            desc: "Deploying AI tools for data analysis, reporting automation, and decision support.",
+          },
+          {
             title: "Reporting in BI tools",
             desc: "Building management reporting that replaces manual spreadsheets.",
           },
@@ -581,7 +589,7 @@ export const copy = {
             label: "projects delivered",
           },
           {
-            value: "−30%",
+            value: "−27%",
             label: "finished goods inventory reduction",
           },
           {
@@ -646,9 +654,9 @@ export const copy = {
       title: "Tell us where it",
       titleAccent: "hurts.",
       sub: "15 minutes is enough to know if we can help. A no-obligation, straightforward conversation about your operation.",
-      bookCall: "Book a free intro call",
       email: "info@zlepsimeto.cz",
       linkedin: "Connect on LinkedIn",
+      linkedinUrl: "https://www.linkedin.com/in/ji%C5%99%C3%AD-barv%C3%ADnek-156778101/",
       form: {
         name: "Name",
         namePlaceholder: "Your name",
@@ -659,8 +667,10 @@ export const copy = {
         message: "What's not working?",
         messagePlaceholder: "Tell us briefly about your operation.",
         submit: "Send message",
+        sending: "Sending…",
         sentTitle: "Message sent.",
         sentSub: "We'll get back to you within one business day.",
+        error: "Something went wrong. Please try again, or email us directly.",
       },
     },
     footer: {
