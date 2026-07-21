@@ -4,5 +4,8 @@
   "assets": {
     "directory": "./out",
     "not_found_handling": "404-page"
-  }
+  },
+  "routes": [
+    { "pattern": "www.zlepsimeto.cz/*", "zone_name": "zlepsimeto.cz" }
+  ]
 }
