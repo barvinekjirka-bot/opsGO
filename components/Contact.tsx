@@ -9,7 +9,7 @@ import SectionLabel from "./SectionLabel";
 // Free form-relay service (web3forms.com) — no backend needed since the
 // site is a static export. Replace with your own access key from
 // https://web3forms.com (free, just an email address, no account/card).
-const WEB3FORMS_ACCESS_KEY = "REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_ACCESS_KEY = "f1da23fc-0fc4-40d3-8c10-171b7015ee84";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
