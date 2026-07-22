@@ -116,7 +116,7 @@ export const copy = {
     methods: {
       label: "Metodiky a standardy",
       title: "Nejsme vázaní na jednu metodiku. Vybíráme nástroj podle problému.",
-      sub: "Za téměř 30 let společné praxe v provozu, plánování a projektovém řízení jsme si osvojili standardizované metody napříč obory. Používáme je tak, jak to dává smysl pro váš konkrétní provoz — ne podle toho, co je zrovna v módě.",
+      sub: "Za více než 25 let společné praxe v provozu, plánování a projektovém řízení jsme si osvojili standardizované metody napříč obory. Používáme je tak, jak to dává smysl pro váš konkrétní provoz — ne podle toho, co je zrovna v módě.",
       categories: [
         {
           title: "Continuous improvement a kvalita",
@@ -213,7 +213,7 @@ export const copy = {
     },
     founders: {
       label: "Kdo jsme",
-      title: "Dva provozáci. Dohromady téměř 30 let praxe a 130+ projektů.",
+      title: "Dva provozáci. Dohromady přes 25 let praxe a 130+ projektů.",
       sub: "ZlepsimeTo založili a vedou lidé, kteří audity, implementace i go-live sami odpracovali — a vědí, co obnáší změna v reálném provozu.",
       jiri: {
         name: "Jiří Barvínek",
@@ -458,7 +458,7 @@ export const copy = {
     methods: {
       label: "Methods & Standards",
       title: "We're not tied to one methodology. We pick the tool that fits the problem.",
-      sub: "Across nearly 30 combined years in operations, planning, and project management, we've built fluency across standardized methods from several disciplines. We apply them the way that makes sense for your operation — not whatever happens to be trending.",
+      sub: "Across 25+ combined years in operations, planning, and project management, we've built fluency across standardized methods from several disciplines. We apply them the way that makes sense for your operation — not whatever happens to be trending.",
       categories: [
         {
           title: "Continuous Improvement & Quality",
@@ -555,7 +555,7 @@ export const copy = {
     },
     founders: {
       label: "Who We Are",
-      title: "Two operators. Nearly 30 combined years and 130+ projects.",
+      title: "Two operators. 25+ combined years and 130+ projects.",
       sub: "ZlepsimeTo is founded and run by people who did the audits, implementations, and go-lives themselves — and know what change takes in a real operation.",
       jiri: {
         name: "Jiří Barvínek",
